@@ -1,0 +1,59 @@
+body {
+    background-color: #18181b; /* Equivalent to bg-zinc-900 */
+    font-smoothing: antialiased;
+
+    /*reset css*/
+    
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.main-container {
+    min-height: 100vh;
+    position: relative;
+}
+
+.background-container {
+    position: absolute;
+    inset: 0;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.scene {
+    position: absolute;
+    inset: 0;
+    height: 600px;
+    width: 100vw;
+    overflow: hidden;
+    mix-blend-mode: lighten;
+    mask-image: radial-gradient(ellipse 150% 200% at 50% 0%, black 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.video-background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+}
+
+.scene-visible {
+    opacity: 1 !important;
+}
+
+.stars {
+    position: absolute;
+    inset: 0;
+}
+
+.star {
+    position: absolute;
+    border-radius: 50%;
+}
